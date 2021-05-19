@@ -1,0 +1,17 @@
+
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+#temperature {
+    font-size: 42px;
+}
+
+#description {
+    font-size: 14px;
+}
+
+.weather-display {
+    img {
+        width: 80px;
+    }
+}

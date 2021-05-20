@@ -12,7 +12,7 @@ const getDivWeather = ( { temperature, description } ) => {
         <p id="description" class="d-inline align-self-center">| ${description} </p>
     </div>
     <div class="col-12 col-sm-6 align-self-right">
-        <img src="./assets/par-cloudy.svg" alt="">
+        <img src="./assets/${setImage(description)}.svg" alt="">
     </div>
     `;
 
@@ -79,6 +79,16 @@ const clear = () => {
     }
 }
 
+const setImage = ( description ) => {
+    if( description.includes('rain') ) {
+        return 'rainy';
+    } else if( description.includes('clear') ) {
+        return 'sunny';
+    } else if( description.includes('cloud') ) {
+        return 'cloudy';
+    }
+}
+
 const displayWeather = ( data ) => {
     clear();
     if( !data ) {
@@ -109,3 +119,5 @@ const events = () => {
 export const init = () => {
     events();
 }
+
+// TODO: Change the image to show the weather description

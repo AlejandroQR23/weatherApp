@@ -89,6 +89,10 @@ const setImage = ( description ) => {
     }
 }
 
+const changeUnits = () => {
+    
+}
+
 const displayWeather = ( data ) => {
     clear();
     if( !data ) {

@@ -8,12 +8,12 @@ const formatData = ( data ) => {
     const {
         name: cityName,
         main: { temp: temperature, feels_like: feelsLike, humidity },
-        wind: { speed },
+        wind: { speed: windSpeed },
         sys:  { country },
-        weather: { description },
+        weather: [{ description }],
     } = data;
 
-    return { cityName, temperature, feelsLike, humidity, speed, description, country };
+    return { cityName, temperature, feelsLike, humidity, windSpeed, description, country };
 
 }
 
